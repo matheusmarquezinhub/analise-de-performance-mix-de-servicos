@@ -8,7 +8,7 @@ Este projeto investiga uma pergunta comum em operações de serviço: crescer em
 
 Usando dados sintéticos de ordens de serviço, o case mostra como volume, mix, repasse e forma de atendimento alteram a margem operacional ao longo do tempo. O foco não está em complexidade técnica, mas em como traduzir dados operacionais em decisões práticas de gestão.
 
-## Problema de Negócio
+## Problema de negócio
 
 Em operações baseadas em serviços, faturamento isolado é um indicador incompleto. Meses com maior receita podem esconder uma combinação menos eficiente de serviços, repasses mais altos e menor captura de valor para a operação.
 
@@ -16,7 +16,7 @@ A questão central deste case é:
 
 **Quais combinações de serviços e atendimentos aumentam a carga operacional sem gerar ganho proporcional de eficiência econômica?**
 
-## Perguntas Que a Análise Responde
+## Perguntas que a análise responde
 
 - Quais períodos apresentam melhor e pior eficiência econômica?
 - O aumento de receita veio acompanhado de melhora de margem?
@@ -24,7 +24,7 @@ A questão central deste case é:
 - Quais serviços e tipos de atendimento mudam o mix entre o melhor e o pior mês?
 - Onde a operação parece estar trocando volume por qualidade de resultado?
 
-## Contexto Dos Dados
+## Contexto dos dados
 
 - Base: ordens de serviço com cliente, data, valor, forma de pagamento, tipo de atendimento e serviço.
 - Recorte analítico: visão mensal da operação.
@@ -50,7 +50,7 @@ Principais métricas usadas no case:
 - `margem`: lucro dividido pelo faturamento.
 - `ticket`: média de valor capturado por atendimento no consolidado mensal.
 
-## Principais Insights
+## Principais insights
 
 - O maior faturamento não correspondeu ao melhor resultado operacional. Outubro de 2025 faturou `R$ 11.900`, mas registrou a pior margem do período, `59,24%`.
 - Junho de 2025 teve faturamento bem menor, `R$ 4.827`, e ainda assim apresentou a melhor margem, `63,26%`.
@@ -58,24 +58,24 @@ Principais métricas usadas no case:
 - O mês de pior margem concentrou mais receita em `Salão` (`97,31%` da receita) e operou com mix de serviços mais amplo, sem traduzir esse aumento de complexidade em melhor eficiência.
 - O mix do pior mês sugere expansão de volume e variedade, mas com captura de valor inferior por composição operacional.
 
-## Decisões De Negócio Sugeridas
+## Decisões de negócio sugeridas
 
 - Revisar políticas de repasse e renegociar condições nos serviços que pressionam a margem.
 - Priorizar serviços e combinações com melhor relação entre receita e captura de valor.
 - Tratar meses de maior faturamento com análise de qualidade de receita, não apenas volume.
 - Monitorar o mix por tipo de atendimento para evitar crescimento concentrado em operações menos eficientes.
 
-## Visualizações-Chave
+## Visualizações-chave
 
-### Evolução Mensal Da Margem
+### Evolução mensal da margem
 
 ![Evolução mensal da margem](outputs/figures/01_monthly_margin_trend.png)
 
-### Decomposição Da Queda De Margem
+### Decomposição da queda de margem
 
 ![Decomposição da queda de margem](outputs/figures/02_margin_bridge_best_vs_worst_month.png)
 
-## Estrutura Do Repositório
+## Estrutura do repositório
 
 ```text
 operational-efficiency-vs-customer-value/
@@ -90,7 +90,7 @@ operational-efficiency-vs-customer-value/
 │  └─ figures/
 ```
 
-## Como Reproduzir
+## Como reproduzir
 
 1. Clone o repositório.
 2. Crie o arquivo `.env` a partir de `.env.example`.
@@ -103,6 +103,6 @@ operational-efficiency-vs-customer-value/
 - O case atual mede eficiência econômica operacional; não há uma coluna explícita de horas por ordem no notebook publicado.
 - A leitura de esforço por cliente é indireta, baseada em mix, valor, repasse e perfil de atendimento.
 
-## Observação Sobre O Nome Do Repositório
+## Observação sobre o nome do repositório
 
 O case foi reposicionado para o nome `operational-efficiency-vs-customer-value`. Se o repositório estiver publicado no GitHub, a troca efetiva do nome também precisa ser feita na interface do GitHub.
